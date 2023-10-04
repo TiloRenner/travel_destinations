@@ -69,32 +69,45 @@ function populateTDMap()
     travelDestMap.set('Algerien', {
         name:"Algerien",
         imgpath:"images/algerien.png",
-        description:"Etwas Text zu Algerien. Und so weiter und so fort."
+        tagline:"Etwas Text zu Algerien. Und so weiter und so fort.",
+        description:"Etwas mehr Text zu Algerien. Und so weiter und so fort."
         }
     );
 
     travelDestMap.set('Italien', {
         name:"Italien",
         imgpath:"images/italien.png",
-        description:"Etwas Text zu Italien. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
+        tagline:"Etwas Text zu Italien. Und so weiter und so fort.",
+        description:"Etwas mehr Text zu Italien. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
     );
     travelDestMap.set('Spanien', {
         name:"Spanien",
         imgpath:"images/spanien.png",
-        description:"Etwas Text zu Spanien. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
+        tagline:"Etwas Text zu Spanien. Und so weiter und so fort.",
+        description:"Etwas mehr Text zu Spanien. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
     );
     travelDestMap.set('Frankreich', {
         name:"Frankreich",
         imgpath:"images/frankreich.png",
-        description:"Etwas Text zu Frankreich. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
+        tagline:"Etwas Text zu Frankreich. Und so weiter und so fort.",
+        description:"Etwas mehr Text zu Frankreich. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
     );
     travelDestMap.set('Niederlande', {
         name:"Niederlande",
         imgpath:"images/niederlande.png",
-        description:"Etwas Text zu den Niederlanden. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
+        tagline:"Etwas Text zu den Niederlanden. Und so weiter und so fort.",
+        description:"Etwas mehr Text zu den Niederlanden. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
+        }
+    );
+
+    travelDestMap.set('Neuseeland', {
+        name:"Neuseeland",
+        imgpath:"images/neuseeland.png",
+        tagline:"Etwas Text zu Neuseeland. Und so weiter und so fort.",
+        description:"Etwas mehr Text zu Neuseeland. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
     );
 
