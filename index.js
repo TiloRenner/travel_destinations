@@ -117,7 +117,7 @@ function populateTDMap()
     travelDestMap.set('Neuseeland', {
         name:"Neuseeland",
         flagpath:"images/svg/schweden_800px.png",
-        imgpath:"images/schweden_800px.jpg",
+        imgpath:'<img src="images/griechenland_800px.jpg" alt="country image">',
         tagline:"Etwas Text zu Neuseeland. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Neuseeland. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
