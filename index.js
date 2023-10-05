@@ -117,9 +117,9 @@ function populateTDMap()
     travelDestMap.set('Neuseeland', {
         name:"Neuseeland",
         flagpath:"images/svg/schweden_800px.png",
-        imgpath:'<img src="images/griechenland_800px.jpg" alt="country image">',
-        tagline:"Etwas Text zu Neuseeland. Und so weiter und so fort.",
-        description:"Etwas mehr Text zu Neuseeland. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
+        imgpath:'images/griechenland_800px.jpg',
+        tagline:"Vulkane und Gletscher im Pazifik",
+        description:'Neuseeland liegt im Südwestpazifik und besteht aus 2 Hauptinseln, die beide durch Vulkane und Vergletscherung geprägt sind. Die Hauptstadt Wellington auf der Nordinsel ist Sitz des großen Nationalmuseums Te Papa Tongarewa. Der spektakuläre Mount Victoria in Wellington sowie die Regionen Fiordland und Southern Lakes auf der Südinsel dienten in der "Herr der Ringe"-Trilogie von Filmemacher Peter Jackson als Kulisse für Tolkiens mythische Mittelerde.'
         }
     );
 
