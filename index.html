@@ -14,11 +14,20 @@
     .card {
       transition: all 0.5s;
     }
+
+    .td_selector.active{
+        background-color: #fbfbfb;
+      }
   </style>
+
+  
 </head>
 <body>
+  
+
+  <!-- Header -->
   <header>
-      <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+      <nav id="page_top" class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
         <div class="container" mx-auto justify>
           <a class="navbar-brand" href="#">
             <img src="/images/f52f02c185bc4a94953bc17d6b410f5c__1_-removebg-preview.png" alt="Logo" width="100">
@@ -51,17 +60,23 @@
               <h4 class="mb-3">die schönsten Urlaubsziele ... hilfreiche Reisetipps ... Empfehlungen.</h4>
     <!--      <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
             </div><! -->
+            </div>
           </div>
         </div>
       </div>
     <!-- Hero -->
   </header>
+  
+  <!-- Header -->
+
+
+
 
   <div class="container" id="overview">
     <div class="row row-cols-2 row-cols-md-3 g-3">
-      <div class="col h-auto">
-        <div class="card h-100 shadow border-light active">
-          <a href="" class="link-dark link-underline link-underline-opacity-0">
+      <div class="col h-auto" >
+        <div class="td_selector card h-80 shadow border-light active" data-traveldest="Schweden" >
+          <a href="#div_id" class="link-dark link-underline link-underline-opacity-0">
             <img src="images/griechenland_800px.jpg" alt="" class="card-img-top" />
             <div class="card-img-overlay d-md-none text-center text-bg-dark h-50 bg-opacity-50">
               <h2><strong>Land 1</strong></h2>
@@ -79,8 +94,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card h-100 shadow border-light">
-          <a href="" class="link-dark link-underline link-underline-opacity-0">
+        <div class=" td_selector card h-100 shadow border-light" data-traveldest="Italien">
+          <a href="#div_id" class="link-dark link-underline link-underline-opacity-0">
             <img src="images/schweden_800px.jpg" alt="" class="card-img-top" />
             <div class="card-img-overlay d-md-none text-center text-white">
               <h2><strong>Land 1</strong></h2>
@@ -97,8 +112,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card h-100 shadow border-light">
-          <a href="" class="link-dark link-underline link-underline-opacity-0">
+        <div class="td_selector card h-100 shadow border-light" data-traveldest="Spanien">
+          <a href="#div_id" class="link-dark link-underline link-underline-opacity-0">
             <img src="images/griechenland_800px.jpg" alt="" class="card-img-top" />
             <div class="card-img-overlay d-md-none text-center text-white">
               <h2><strong>Land 1</strong></h2>
@@ -115,8 +130,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card h-100 shadow border-light ">
-          <a href="" class="link-dark link-underline link-underline-opacity-0">
+        <div class="td_selector card h-100 shadow border-light " data-traveldest="Frankreich">
+          <a href="#div_id" class="link-dark link-underline link-underline-opacity-0">
             <img src="images/griechenland_800px.jpg" alt="" class="card-img-top " />
             <div class="card-img-overlay d-md-none text-center text-white text-bg-dark h-50">
               <h2><strong>Land 1</strong></h2>
@@ -133,8 +148,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card h-100 shadow border-light">
-          <a href="" class="link-dark link-underline link-underline-opacity-0">
+        <div class="td_selector card h-100 shadow border-light" data-traveldest="Niederlande">
+          <a href="#div_id" class="link-dark link-underline link-underline-opacity-0">
             <img src="images/schweden_800px.jpg" alt="" class="card-img-top " />
             <div class="card-img-overlay d-md-none text-center text-white">
               <h2><strong>Land 1</strong></h2>
@@ -151,8 +166,8 @@
         </div>
       </div>
       <div class="col">
-        <div class="card h-100 shadow border-light">
-          <a href="" class="link-dark link-underline link-underline-opacity-0">
+        <div class="td_selector card h-100 shadow border-light" data-traveldest="Neuseeland">
+          <a href="#div_id" class="link-dark link-underline link-underline-opacity-0">
             <img src="images/griechenland_800px.jpg" alt="" class="card-img-top " />
             <div class="card-img-overlay d-md-none text-center text-white">
               <h2><strong>Land 1</strong></h2>
@@ -169,7 +184,88 @@
         </div>
       </div>
     </div>
+  </div>
+
+<!-- <div class="container">
+    <div class="row">
+      <div class="td_selector col" data-traveldest="Niederlande">Niederlande</div>
+      <div class="td_selector col" data-traveldest="Neuseeland">Neuseeland</div>
     </div>
+  </div>-->
+
+      <div  class="container" >
+        <div class="row ">
+          <div class = "col"> 
+            <br>
+          </div>
+        </div>
+      </div>
+  <main>
+      <div id="div_id" class="container" >
+        <div class="row bg-light bg-opacity-75 rounded"> <!-- OuterRow für COntent  -->
+          <div class ="col">
+            <div class="row"><!-- Name  -->
+              <div id="selected_dest_name"  class = "col h3">
+                Country 
+              </div>
+            </div>
+            <div class="row"><!-- Name  -->
+              <div class = "col">
+                <br>
+              </div>
+            </div>
+            <div class="row">
+              <div id="contentrow" class="col-12 col-md-6">
+                <div class="row h-100">
+                  <div  class = "col" >
+                    <div class="row"> <!-- Tagline  -->
+                      <div id="selected_dest_tagline" class = "col h6">Tagline
+        
+                      </div>
+                    </div>
+                    <div class="row"> <!-- Tagline  -->
+                      <div class = "col">
+                        <br>
+                      </div>
+                    </div>
+                    <div class="row"> <!-- Beschreibung  -->
+                      <div id="selected_dest_description" class="col">Beschreibung
+        
+                      </div>
+                    </div>
+                    <div class="row"> <!-- Beschreibung  -->
+                      <div class="col">
+                        <br>
+                      </div>
+                    </div>
+                  </div>
+    
+                </div>
+    
+              </div>
+    
+              <div id="selected_dest_imagepath" class="col-12 col-md-6 text-center">
+                    <img src="images/schweden_800px.jpg" alt="country" class="img-fluid rounded">  <!--   Bild -->
+              </div>
+    
+    
+            </div>
+            <div class="row">
+              <a href="#page_top"> TOP       </a>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </main>
+  <h1>Hello, world!</h1>
+
+  <!--  Ende Main-->
+
+
+
+
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-light text-muted">
     <section class=" py-4 my-4">
@@ -204,8 +300,15 @@
     <div class="d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
       <p>&copy; 2023 URLAUBSZIELE.DE. All rights reserved.</p>
     </div>
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
   </footer>
   <!-- Footer -->
+
 </body>
+
+
+      <!-- <script src="../assets/dist/js/bootstrap.bundle.min.js"></script> -->
+      <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>-->
+      <script src="index.js"></script>
+
 </html>
