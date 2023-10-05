@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,41 +16,46 @@
     }
   </style>
 </head>
-
 <body>
-  <!-- Header -->
   <header>
-    <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="/images/f52f02c185bc4a94953bc17d6b410f5c__1_-removebg-preview.png" alt="Logo" width="100">
-        </a>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01" justify-content-evenly>
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Urlaubsziele</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Über uns</a>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Urlaubsziel suchen" aria-label="Suche">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+      <nav class="navbar navbar-expand-lg sticky-top bg-body-tertiary">
+        <div class="container" mx-auto justify>
+          <a class="navbar-brand" href="#">
+            <img src="/images/f52f02c185bc4a94953bc17d6b410f5c__1_-removebg-preview.png" alt="Logo" width="100">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Urlaubsziele">Urlaubsziele</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Über uns">Über uns</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Urlaubsziel suchen" aria-label="search" id="datatable-search-input">
+              <button class="btn btn-outline-success" type="submit">Suchen</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Hero -->
+      <div class=" text-center bg-image mb-1" style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/041.webp'); height: 400px;" id="Über uns">
+        <div class="mask h-100 w-100" style="background-color: rgba(0, 0, 0, 0.6);">
+          <div class="d-flex justify-content-center align-items-center h-100">
+            <div class="text-white">
+              <h1 class="mb-3">URLAUBSZIELE.DE</h1>
+              <h4 class="mb-3">die schönsten Urlaubsziele ... hilfreiche Reisetipps ... Empfehlungen.</h4>
+    <!--      <a class="btn btn-outline-light btn-lg" href="#!" role="button">Call to action</a>
+            </div><! -->
+          </div>
         </div>
       </div>
-    </nav>
+    <!-- Hero -->
   </header>
-  <!-- Header -->
-
-  <div class="container">
-    <div class="col bg-primary">1</div>
-    <div class="col">2</div>
-    <div class="col">3</div>
-    <div class="col">4</div>
-  </div>
-  <h1>Hello, world!</h1>
 
   <div class="container" id="overview">
     <div class="row row-cols-2 row-cols-md-3 g-3">
@@ -71,6 +75,7 @@
               </p>
             </div>
           </a>
+
         </div>
       </div>
       <div class="col">
@@ -164,7 +169,7 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-light text-muted">
     <section class=" py-4 my-4">
@@ -203,5 +208,4 @@
   </footer>
   <!-- Footer -->
 </body>
-
 </html>
