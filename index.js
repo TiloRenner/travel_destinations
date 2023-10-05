@@ -38,8 +38,14 @@ function selectTravelDestination(destination_name)
     if(selected_destination !== undefined)
     {
         document.getElementById("selected_dest_name").textContent=selected_destination.name;
+        document.getElementById("contentrow").style.backgroundImage = "url('images/svg/swe.svg')";
+        document.getElementById("contentrow").style.backgroundSize = "cover";
+        document.getElementById("contentrow").style.backgroundRepeat = "no-repeat";
+        document.getElementById("contentrow").style.backgroundBlendMode = "screen";
+        document.getElementById("selected_dest_tagline").textContent=selected_destination.tagline;
         document.getElementById("selected_dest_description").textContent=selected_destination.description;
-        document.getElementById("selected_dest_imagepath").textContent=selected_destination.imgpath;
+        document.getElementById("selected_dest_imagepath").innerHTML=selected_destination.imgpath;
+        document.getElementById("selected_dest_imagepath").style.opacity ="1";
         return true;
     }
     else{
@@ -66,9 +72,10 @@ function markActiveTDSelector(active_element)
 
 function populateTDMap()
 {
-    travelDestMap.set('Algerien', {
-        name:"Algerien",
-        imgpath:"images/algerien.png",
+    travelDestMap.set('Schweden', {
+        name:"Schweden",
+        flagpath:"images/svg/swe.svg",
+        imgpath:'            <img src="images/schweden_800px.jpg" alt="country image">',
         tagline:"Etwas Text zu Algerien. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Algerien. Und so weiter und so fort."
         }
@@ -76,6 +83,7 @@ function populateTDMap()
 
     travelDestMap.set('Italien', {
         name:"Italien",
+        flagpath:"images/svg/schweden_800px.png",
         imgpath:"images/italien.png",
         tagline:"Etwas Text zu Italien. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Italien. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
@@ -83,6 +91,7 @@ function populateTDMap()
     );
     travelDestMap.set('Spanien', {
         name:"Spanien",
+        flagpath:"images/svg/schweden_800px.png",
         imgpath:"images/spanien.png",
         tagline:"Etwas Text zu Spanien. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Spanien. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
@@ -90,6 +99,7 @@ function populateTDMap()
     );
     travelDestMap.set('Frankreich', {
         name:"Frankreich",
+        flagpath:"images/svg/schweden_800px.png",
         imgpath:"images/frankreich.png",
         tagline:"Etwas Text zu Frankreich. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Frankreich. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
@@ -97,6 +107,7 @@ function populateTDMap()
     );
     travelDestMap.set('Niederlande', {
         name:"Niederlande",
+        flagpath:"images/svg/schweden_800px.png",
         imgpath:"images/niederlande.png",
         tagline:"Etwas Text zu den Niederlanden. Und so weiter und so fort.",
         description:"Etwas mehr Text zu den Niederlanden. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
@@ -105,7 +116,8 @@ function populateTDMap()
 
     travelDestMap.set('Neuseeland', {
         name:"Neuseeland",
-        imgpath:"images/neuseeland.png",
+        flagpath:"images/svg/schweden_800px.png",
+        imgpath:'            <img src="images/schweden_800px.jpg" alt="country image">',
         tagline:"Etwas Text zu Neuseeland. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Neuseeland. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
