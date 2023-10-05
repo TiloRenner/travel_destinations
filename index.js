@@ -38,13 +38,13 @@ function selectTravelDestination(destination_name)
     if(selected_destination !== undefined)
     {
         document.getElementById("selected_dest_name").textContent=selected_destination.name;
-        document.getElementById("contentrow").style.backgroundImage = "url('images/svg/swe.svg')";
+        /*document.getElementById("contentrow").style.backgroundImage = "url('images/svg/swe.svg')";
         document.getElementById("contentrow").style.backgroundSize = "cover";
         document.getElementById("contentrow").style.backgroundRepeat = "no-repeat";
-        document.getElementById("contentrow").style.backgroundBlendMode = "screen";
+        document.getElementById("contentrow").style.backgroundBlendMode = "screen";*/
         document.getElementById("selected_dest_tagline").textContent=selected_destination.tagline;
         document.getElementById("selected_dest_description").textContent=selected_destination.description;
-        document.getElementById("selected_dest_imagepath").innerHTML=selected_destination.imgpath;
+        document.getElementById("selected_dest_imagepath").src=selected_destination.imgpath;
         document.getElementById("selected_dest_imagepath").style.opacity ="1";
         return true;
     }
@@ -117,7 +117,7 @@ function populateTDMap()
     travelDestMap.set('Neuseeland', {
         name:"Neuseeland",
         flagpath:"images/svg/schweden_800px.png",
-        imgpath:'            <img src="images/schweden_800px.jpg" alt="country image">',
+        imgpath:"images/schweden_800px.jpg",
         tagline:"Etwas Text zu Neuseeland. Und so weiter und so fort.",
         description:"Etwas mehr Text zu Neuseeland. Wetter, Essen Sehenswürdigkeiten und so weiter und so fort."
         }
