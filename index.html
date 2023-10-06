@@ -19,22 +19,24 @@
         background-color: #fbfbfb;
     }
 
-    .topimg{
+    .shareimg, .topimg{
         /*filter: invert(50%);*/ 
         -webkit-filter: invert(20%);
         height: 30px;
         /*filter: hue-rotate(90deg);
         filter: brightness(5.25);*/
         filter: brightness(0.9) invert(.35) sepia(.5) hue-rotate(180deg) saturate(2000%);
+        transition:all 0.3s ease-in;
 
 
 
     }
-    .topimg:hover {
+    .shareimg:hover,.topimg:hover {
         filter: invert(0%);
         -webkit-filter: invert(0%);
         height: 30px;
         filter: brightness(0.9) invert(.20) sepia(.5) hue-rotate(180deg) saturate(2000%);
+        transition:all 0.3s ease-in;
 
     }
   </style>
@@ -212,7 +214,7 @@
           <div class ="col">
             <div class="row"><!-- Name  -->
               <div id="selected_dest_name"  class = "col h3">
-                Country 
+                Schweden 
               </div>
             </div>
             <div class="row"><!-- Name  -->
@@ -225,7 +227,7 @@
                 <div class="row h-100">
                   <div  class = "col" >
                     <div class="row"> <!-- Tagline  -->
-                      <div id="selected_dest_tagline" class = "col h6">Tagline
+                      <div id="selected_dest_tagline" class = "col h6">Spiel aus Insel und Seen
         
                       </div>
                     </div>
@@ -235,7 +237,7 @@
                       </div>
                     </div>
                     <div class="row"> <!-- Beschreibung  -->
-                      <div id="selected_dest_description" class="col">Beschreibung
+                      <div id="selected_dest_description" class="col">Schweden ist ein skandinavisches Land mit Tausenden der Küste vorgelagerten Inseln und Seen im Landesinnern sowie großen Nadelwäldern und Gletscherbergen. Die größten Städte, wie die Hauptstadt Stockholm im Osten und Göteborg und Malmö im Südwesten, liegen alle an der Küste. Stockholm wurde auf 14 Inseln errichtet, hat mehr als 50 Brücken und besitzt die mittelalterliche Altstadt Gamla Stan, Königspaläste und Museen wie das Freiluftmuseum Skansen.
         
                       </div>
                     </div>
@@ -254,11 +256,23 @@
               </div>
             </div>
             <div class="row">
-              <div class="col" style="height:32px;">
-                <a href="#page_top"  >
-                  <img src="images/svg/to-top-b.svg" class = "topimg" >
-                </a>
+              <div class="col-2" style="height:32px; width:100px;">
+                <div class="row">
+                  <div class=" col">
+                    <a href="#page_top"  >
+                      <img src="images/svg/to-top-b.svg" class = "topimg" >
+                    </a>
+                  </div>
+                  <div class = "sharecountry col">
+
+                      <img src="images/svg/share.svg" class = "shareimg" >
+            
+                  </div>
+                </div>
               </div>
+              <div class="col-10">
+              </div>
+
             </div>
           </div>
         </div>
