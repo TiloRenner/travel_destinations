@@ -1,15 +1,9 @@
-
-document.querySelector('.sharecountry').addEventListener('click', () => {alert("Teile Infos über" + selectedCountry);});
-
 let selectedCountry = "";
-
 const selectorsTravelDest = document.querySelectorAll(".td_selector");
-
 const travelDestMap = new Map();
-
 populateTDMap();
-
 selectTravelDestination("Neuseeland");
+document.querySelector('.sharecountry').addEventListener('click', () => {alert("Teile Infos über" + selectedCountry);});
 
 selectorsTravelDest.forEach(el =>
     {
@@ -19,20 +13,32 @@ selectorsTravelDest.forEach(el =>
             {
                 el_value= ev.currentTarget.dataset.traveldest;
                 selectTravelDestination(el_value);
-                //markActiveTDSelector(ev.currentTarget);
-                console.log("Value"+ el_value);
-
             }
             else
             {
                 console.log("ERROR: No Data Attribute with traveldest or Value is null or undefined!");
-                el_value= ev.currentTarget.dataset.traveldest;
-                console.log(el_value);
-
-                /*Todo? HTML marieren für debug ? */
             }
         });
     });
+
+document.querySelector("form").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    let searchedCountry = ev.target.elements.searchterm.value;
+    if (searchedCountry) {
+
+        if(selectTravelDestination(searchedCountry))
+        {
+        document.getElementById('div_id').scrollIntoView();
+        }
+        else
+        {
+            window.alert(searchedCountry + " wurde leider nicht gefunden.");
+        }
+    }
+    else{
+        window.alert("Bitte geben sie einen Suchbegriff ein.");
+    }
+  });
 
 
 
@@ -51,7 +57,6 @@ function selectTravelDestination(destination_name)
         document.getElementById("selected_dest_description").textContent=selected_destination.description;
         document.getElementById("selected_dest_imagepath").src=selected_destination.imgpath;
         document.getElementById("selected_dest_imagepath").style.opacity ="1";
-
         selectedCountry=destination_name
         return true;
     }
@@ -129,8 +134,4 @@ function populateTDMap()
         description:'Neuseeland liegt im Südwestpazifik und besteht aus 2 Hauptinseln, die beide durch Vulkane und Vergletscherung geprägt sind. Die Hauptstadt Wellington auf der Nordinsel ist Sitz des großen Nationalmuseums Te Papa Tongarewa. Der spektakuläre Mount Victoria in Wellington sowie die Regionen Fiordland und Southern Lakes auf der Südinsel dienten in der "Herr der Ringe"-Trilogie von Filmemacher Peter Jackson als Kulisse für Tolkiens mythische Mittelerde.'
         }
     );
-
-
-
-
 }
