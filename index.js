@@ -1,10 +1,15 @@
+
+document.querySelector('.sharecountry').addEventListener('click', () => {alert("Teile Infos über" + selectedCountry);});
+
+let selectedCountry = "";
+
 const selectorsTravelDest = document.querySelectorAll(".td_selector");
 
 const travelDestMap = new Map();
 
 populateTDMap();
 
-
+selectTravelDestination("Neuseeland");
 
 selectorsTravelDest.forEach(el =>
     {
@@ -14,7 +19,7 @@ selectorsTravelDest.forEach(el =>
             {
                 el_value= ev.currentTarget.dataset.traveldest;
                 selectTravelDestination(el_value);
-                markActiveTDSelector(ev.currentTarget);
+                //markActiveTDSelector(ev.currentTarget);
                 console.log("Value"+ el_value);
 
             }
@@ -46,6 +51,8 @@ function selectTravelDestination(destination_name)
         document.getElementById("selected_dest_description").textContent=selected_destination.description;
         document.getElementById("selected_dest_imagepath").src=selected_destination.imgpath;
         document.getElementById("selected_dest_imagepath").style.opacity ="1";
+
+        selectedCountry=destination_name
         return true;
     }
     else{
@@ -56,7 +63,7 @@ function selectTravelDestination(destination_name)
 
 }
 
-/* Todo refactor to take string with selectors instead of hardcoded query */
+/* Todo refactor to take string with selectors instead of hardcoded query? */
 function markActiveTDSelector(active_element)
 {
     /*Todo Check if too slow maybe replace with getElementsbyClassName */
