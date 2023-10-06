@@ -17,7 +17,26 @@
 
     .td_selector.active{
         background-color: #fbfbfb;
-      }
+    }
+
+    .topimg{
+        /*filter: invert(50%);*/ 
+        -webkit-filter: invert(20%);
+        height: 30px;
+        /*filter: hue-rotate(90deg);
+        filter: brightness(5.25);*/
+        filter: brightness(0.9) invert(.35) sepia(.5) hue-rotate(180deg) saturate(2000%);
+
+
+
+    }
+    .topimg:hover {
+        filter: invert(0%);
+        -webkit-filter: invert(0%);
+        height: 30px;
+        filter: brightness(0.9) invert(.20) sepia(.5) hue-rotate(180deg) saturate(2000%);
+
+    }
   </style>
 
   
@@ -235,7 +254,11 @@
               </div>
             </div>
             <div class="row">
-              <a href="#page_top"> TOP       </a>
+              <div class="col" style="height:32px;">
+                <a href="#page_top"  >
+                  <img src="images/svg/to-top-b.svg" class = "topimg" >
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -243,7 +266,6 @@
 
       </div>
     </main>
-  <h1>Hello, world!</h1>
 
   <!--  Ende Main-->
 
