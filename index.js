@@ -24,6 +24,7 @@ selectorsTravelDest.forEach(el =>
 document.querySelector("form").addEventListener("submit", (ev) => {
     ev.preventDefault();
     let searchedCountry = ev.target.elements.searchterm.value;
+    console.log(searchedCountry.toLowerCase())
     if (searchedCountry) {
 
         if(selectTravelDestination(searchedCountry))
@@ -39,6 +40,7 @@ document.querySelector("form").addEventListener("submit", (ev) => {
         window.alert("Bitte geben sie einen Suchbegriff ein.");
     }
   });
+
 
 
 
