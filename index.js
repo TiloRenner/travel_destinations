@@ -46,7 +46,7 @@ document.querySelector("form").addEventListener("submit", (ev) => {
 
 function selectTravelDestination(destination_name)
 {
-    let selected_destination = travelDestMap.get(destination_name);
+    let selected_destination = travelDestMap.get(destination_name.toLowerCase());
 
     if(selected_destination !== undefined)
     {
@@ -86,7 +86,7 @@ function markActiveTDSelector(active_element)
 
 function populateTDMap()
 {
-    travelDestMap.set('Schweden', {
+    travelDestMap.set('schweden', {
         name:"Schweden",
         flagpath:"images/svg/swe.svg",
         imgpath:"images/schweden_800px.jpg",
@@ -95,7 +95,7 @@ function populateTDMap()
         }
     );
 
-    travelDestMap.set('Algerien', {
+    travelDestMap.set('algerien', {
         name:"Algerien",
         flagpath:"images/svg/schweden_800px.png",
         imgpath:"https://supertest.de/media/b78/ab/constantine-algerien.detail_2x.webp",
@@ -103,7 +103,7 @@ function populateTDMap()
         description:"Algerien ist ein nordafrikanisches Land, dessen Küste durch das Mittelmeer begrenzt wird und dessen Landesinneres zur Sahara gehört. Viele Reiche haben hier ihre Spuren hinterlassen, etwa die altrömischen Ruinen im Küstenstädtchen Tipaza. In der Hauptstadt Algier bestimmen markante Gebäude aus der osmanischen Zeit, wie die ungefähr aus dem Jahr 1612 stammende Ketchaoua-Moschee, das auf einem Hügel gelegene Altstadtviertel Kasbah mit seinen engen Gassen und Treppen."
         }
     );
-    travelDestMap.set('Griechenland', {
+    travelDestMap.set('griechenland', {
         name:"Griechenland",
         flagpath:"images/svg/schweden_800px.png",
         imgpath:"images/griechenland_800px.jpg",
@@ -111,7 +111,7 @@ function populateTDMap()
         description:"Griechenland ist ein Staat in Südosteuropa, der Tausende Inseln im Ägäischen und Ionischen Meer umfasst. Aufgrund seiner einflussreichen Rolle in der Antike wird Griechenland oft als Wiege der westlichen Zivilisation bezeichnet. Die griechische Hauptstadt Athen beherbergt Wahrzeichen wie die Akropolis, eine Stadtfestung aus dem 5. Jh. v. Chr. mit dem Parthenon-Tempel. Griechenland ist auch ein bekanntes Reiseziel für Strandurlaube – vom schwarzen Sand auf Santorin bis zur Partyszene auf Mykonos."
         }
     );
-    travelDestMap.set('Frankreich', {
+    travelDestMap.set('frankreich', {
         name:"Frankreich",
         flagpath:"images/svg/schweden_800px.png",
         imgpath:"https://images.ctfassets.net/rc3dlxapnu6k/4qhCSGgWU4l87x1Q8i0vts/b2c0f9361ec4a441e5476d19b3434ea5/iStock-1398324421.jpg?w=2121&h=1193&fl=progressive&q=50&fm=jpg",
@@ -119,7 +119,7 @@ function populateTDMap()
         description:"Frankreich im Westen Europas ist ein Land mit mittelalterlichen Städten, Bergdörfern und Mittelmeerstränden. Die Hauptstadt Paris gilt als erstrangiges Mode- und Kulturzentrum. Neben klassischen Kunstmuseen wie dem Louvre befinden sich hier auch Wahrzeichen wie der Eiffelturm. Das Land ist außerdem bekannt für seine Weine und die raffinierte Küche. Uralte Malereien in der Höhle von Lascaux sind Zeugnisse der reichen französischen Geschichte, ebenso wie das römische Theater in Lyon oder das prunkvolle Schloss Versailles."
         }
     );
-    travelDestMap.set('Niederlande', {
+    travelDestMap.set('niederlande', {
         name:"Niederlande",
         flagpath:"images/svg/schweden_800px.png",
         imgpath:"https://image.geo.de/30833876/t/-o/v3/w1440/r1.5/-/enkhuizen-a--356431172.jpg",
@@ -128,7 +128,7 @@ function populateTDMap()
         }
     );
 
-    travelDestMap.set('Neuseeland', {
+    travelDestMap.set('neuseeland', {
         name:"Neuseeland",
         flagpath:"images/svg/schweden_800px.png",
         imgpath:'https://viel-unterwegs.de/wp-content/uploads/2022/04/neuseeland-sehenswuerdigkeiten.jpg',
