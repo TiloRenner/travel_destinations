@@ -1,15 +1,9 @@
-
-document.querySelector('.sharecountry').addEventListener('click', () => {alert("Teile Infos über" + selectedCountry);});
-
 let selectedCountry = "";
-
 const selectorsTravelDest = document.querySelectorAll(".td_selector");
-
 const travelDestMap = new Map();
-
 populateTDMap();
-
 selectTravelDestination("Neuseeland");
+document.querySelector('.sharecountry').addEventListener('click', () => {alert("Teile Infos über" + selectedCountry);});
 
 selectorsTravelDest.forEach(el =>
     {
@@ -19,26 +13,40 @@ selectorsTravelDest.forEach(el =>
             {
                 el_value= ev.currentTarget.dataset.traveldest;
                 selectTravelDestination(el_value);
-                //markActiveTDSelector(ev.currentTarget);
-                console.log("Value"+ el_value);
-
             }
             else
             {
                 console.log("ERROR: No Data Attribute with traveldest or Value is null or undefined!");
-                el_value= ev.currentTarget.dataset.traveldest;
-                console.log(el_value);
-
-                /*Todo? HTML marieren für debug ? */
             }
         });
     });
+
+document.querySelector("form").addEventListener("submit", (ev) => {
+    ev.preventDefault();
+    let searchedCountry = ev.target.elements.searchterm.value;
+    console.log(searchedCountry.toLowerCase())
+    if (searchedCountry) {
+
+        if(selectTravelDestination(searchedCountry))
+        {
+        document.getElementById('div_id').scrollIntoView();
+        }
+        else
+        {
+            window.alert(searchedCountry + " wurde leider nicht gefunden.");
+        }
+    }
+    else{
+        window.alert("Bitte geben sie einen Suchbegriff ein.");
+    }
+  });
+
 
 
 
 function selectTravelDestination(destination_name)
 {
-    let selected_destination = travelDestMap.get(destination_name);
+    let selected_destination = travelDestMap.get(destination_name.toLowerCase());
 
     if(selected_destination !== undefined)
     {
@@ -83,7 +91,7 @@ function markActiveTDSelector(active_element)
 
 function populateTDMap()
 {
-    travelDestMap.set('Schweden', {
+    travelDestMap.set('schweden', {
         name:"Schweden",
         flagpath:"images/svg/swe.svg",
         imgpath:"images/schweden_800px.jpg",
@@ -95,7 +103,7 @@ function populateTDMap()
     }
     );
 
-    travelDestMap.set('Algerien', {
+    travelDestMap.set('algerien', {
         name:"Algerien",
         flagpath:"images/svg/dza.svg",
         imgpath:"https://supertest.de/media/b78/ab/constantine-algerien.detail_2x.webp",
@@ -106,7 +114,7 @@ function populateTDMap()
         area: "2.381.741 km²"
         }
     );
-    travelDestMap.set('Griechenland', {
+    travelDestMap.set('griechenland', {
         name:"Griechenland",
         flagpath:"images/svg/grc.svg",
         imgpath:"images/griechenland_800px.jpg",
@@ -117,7 +125,7 @@ function populateTDMap()
         area: "131.957 km² "    
     }
     );
-    travelDestMap.set('Frankreich', {
+    travelDestMap.set('frankreich', {
         name:"Frankreich",
         flagpath:"images/svg/fra.svg",
         imgpath:"https://images.ctfassets.net/rc3dlxapnu6k/4qhCSGgWU4l87x1Q8i0vts/b2c0f9361ec4a441e5476d19b3434ea5/iStock-1398324421.jpg?w=2121&h=1193&fl=progressive&q=50&fm=jpg",
@@ -128,7 +136,7 @@ function populateTDMap()
         area: "632.734 km² "    
     }
     );
-    travelDestMap.set('Niederlande', {
+    travelDestMap.set('niederlande', {
         name:"Niederlande",
         flagpath:"images/svg/nld.svg",
         imgpath:"https://image.geo.de/30833876/t/-o/v3/w1440/r1.5/-/enkhuizen-a--356431172.jpg",
@@ -140,7 +148,7 @@ function populateTDMap()
     }
     );
 
-    travelDestMap.set('Neuseeland', {
+    travelDestMap.set('neuseeland', {
         name:"Neuseeland",
         flagpath:"images/svg/nzl.svg",
         imgpath:'https://viel-unterwegs.de/wp-content/uploads/2022/04/neuseeland-sehenswuerdigkeiten.jpg',
@@ -151,8 +159,4 @@ function populateTDMap()
         area: "269.652 km²"
         }
     );
-
-
-
-
 }
